@@ -1,0 +1,8 @@
+feature_extraction:
+  ros__parameters:
+    threshold: 65
+    alg: "SOCA"
+    guard_cells: 40
+    training_cells: 10
+    pfa: 0.1 
+    tau: 10

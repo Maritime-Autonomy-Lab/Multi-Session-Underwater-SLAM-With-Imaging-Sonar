@@ -1,0 +1,43 @@
+<launch>
+
+  <!-- start the dead reckoning -->
+  <node
+    pkg="boat_slam"
+    exec="dead_reckoning_lidar.py"
+    name="dead_reckoning_lidar"
+    output="screen"
+    namespace="">
+    <env name="PYTHONUNBUFFERED" value="1"/>
+    <param from="$(find-pkg-share boat_slam)/config/dead_reckoning.yaml"/>
+  </node>
+
+  <!-- start the feature extraction -->
+  <node
+    pkg="boat_slam"
+    exec="feature_extraction.py"
+    name="feature_extraction"
+    output="screen"
+    namespace="">
+    <env name="PYTHONUNBUFFERED" value="1"/>
+    <param from="$(find-pkg-share boat_slam)/config/feature_extraction.yaml"/>
+  </node>
+
+  <!-- start SLAM -->
+  <node
+    pkg="boat_slam"
+    exec="object_slam_node.py"
+    name="object_slam_node_node_node"
+    output="screen"
+    namespace="">
+    <env name="PYTHONUNBUFFERED" value="1"/>
+    <param from="$(find-pkg-share boat_slam)/config/slam.yaml"/>
+  </node>
+
+  <!-- get rviz going -->
+  
+
+  <!-- rqt_gui for sidescan control
+  <node name="rqt" pkg="rqt_gui" exec="rqt_gui"/>
+  -->
+
+</launch>

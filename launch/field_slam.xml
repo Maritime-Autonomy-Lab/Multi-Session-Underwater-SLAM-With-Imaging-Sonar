@@ -1,0 +1,18 @@
+<launch>
+
+  <!-- start the dead reckoning-->
+  <node pkg="boat_slam" exec="dead_reckoning_lidar.py" name="dead_reckoning_lidar" output="screen" namespace=""/>
+
+   <!-- start the feature extraction -->
+  <node pkg="boat_slam" exec="feature_extraction.py" name="feature_extraction" output="screen" namespace=""/>
+
+   <!-- start SLAM -->
+  <node pkg="boat_slam" exec="slam_node.py" name="slam_node" output="screen" namespace=""/>
+
+  <!-- get rivz going -->
+  <node name="rviz2" pkg="rviz2" exec="rviz2" args="-d $(find-pkg-share boat_slam)/config/field_no_lidar.rviz"/>
+
+  <!-- rqt_gui for sidescan control-->
+  <node name="rqt" pkg="rqt_gui" exec="rqt_gui"/>
+  
+</launch>

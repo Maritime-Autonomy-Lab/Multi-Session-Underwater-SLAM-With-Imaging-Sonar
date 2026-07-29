@@ -1,0 +1,34 @@
+slam_node:
+  ros__parameters:
+
+    # --- Keyframe parameters ---
+    keyframe_translation: 3.0
+    keyframe_rotation: 0.5235987756   # radians(30.0)
+
+    # --- Noise models ---
+    prior_sigmas: [0.1, 0.1, 0.01]
+    odom_sigmas: [0.2, 0.2, 0.02]
+    icp_odom_sigmas: [0.1, 0.1, 0.01]
+
+    # --- Map downsampling ---
+    point_resolution: 0.5
+
+    # --- Sequential Scan Matching (SSM) ---
+    ssm/enable: false
+    ssm/min_points: 50.0
+    ssm/max_translation: 3.0
+    ssm/max_rotation: 0.5235987756
+    ssm/target_frames: 3.0
+
+    # --- Non-Sequential Scan Matching (NSSM / loop closures) ---
+    nssm/enable: false
+    nssm/min_st_sep: 60
+    nssm/min_points: 50.0
+    nssm/max_translation: 65.0
+    nssm/max_rotation: 1.0471975512
+    nssm/source_frames: 20
+    nssm/cov_samples: 30
+
+    # --- Pairwise Consistency Maximization (PCM) ---
+    pcm_queue_size: 6
+    min_pcm: 3

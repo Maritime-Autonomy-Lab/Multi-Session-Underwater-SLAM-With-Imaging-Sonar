@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>boat_slam</name>
+  <version>0.0.1</version>
+  <description>
+    This is a ROS 2 package template.
+  </description>
+  
+  <!-- Maintainer information -->
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+
+  <!-- License information -->
+  <license>BSD</license>
+
+  <!-- Package dependencies -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>sonar_oculus</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>libpointmatcher</exec_depend>
+  <!-- Add more dependencies as needed -->
+
+  <!-- Message generation -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <!-- Package URLs (homepage, bug tracker, etc.) -->
+  <!-- <url type="website">http://www.example.com</url> -->
+  <!-- <url type="bugtracker">http://www.example.com/bugs</url> -->
+
+  <!-- Other optional fields -->
+  <!-- <author>Your Name</author> -->
+  <!-- <doc_depend>rosdoc_lite</doc_depend> -->
+  <!-- <test_depend>rostest</test_depend> -->
+  <!-- <review status="unreviewed" notes="This package is under development."/> -->
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+    <build_type>ament_cmake</build_type>
+  </export>
+  
+</package>

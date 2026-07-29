@@ -1,0 +1,4 @@
+dead_reckoning_lidar:
+  ros__parameters:
+    dvl_mode: "nortek"       # "nortek" or "waterlinked"
+    use_gyro: false
