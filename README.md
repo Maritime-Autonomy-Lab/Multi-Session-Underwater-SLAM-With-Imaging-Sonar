@@ -6,13 +6,9 @@ The views expressed in this repo are those of the author(s) and do not reflect t
 
 # Sensor overview
 
-Our vehicle is documented in this repo: Link coming soon! 
 - Occulus M750d imaging sonar
-- Occulus M1200 imaging sonar (optional)
-- Rowe SeaPilot DVL
+- Nortek DVL 1000
 - Vectornav 100 MEMS IMU
-- Bar30 pressure sensor
-- KVH-DSP-1760 fiber optic gyroscope (optional)
 
 # Python Dependencies, note python-3
 
